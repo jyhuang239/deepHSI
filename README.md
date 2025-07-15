@@ -1,21 +1,20 @@
-# SRS2021
+# deepHSI
 README: Spectral Autoencoder-Decoder Network for Hyperspectral Denoising and Segmentation
 
 project github: https://github.com/jyhuang239/deepHSI.git
 
 Last Updated: July 10, 2025
 
-## 📁 File Structure
-.
-├── auto_encoderdecoder.py         # Autoencoder-decoder model
-├── train_HSImodel_on_tifstack.py  # Training script
-├── run_HSImodel_on_tifstack.py    # Model prediction, latent-space clustering, and segmentation script
-├── HSI_400-1000nm/
-│   └── WHU-LongKou.tif            # Sample hyperspectral image stack
-├── model/
-│   └── WHU-LongKou_hsi.pt         # Output trained model
+📁 File Structure </br>
+├── auto_encoderdecoder.py         # Autoencoder-decoder model </br>
+├── train_HSImodel_on_tifstack.py  # Training script </br>
+├── run_HSImodel_on_tifstack.py    # Model prediction, latent-space clustering, and segmentation script </br>
+├── HSI_400-1000nm/ </br>
+│   └── WHU-LongKou.tif            # Sample hyperspectral image stack </br>
+├── model/          </br>
+│   └── WHU-LongKou_hsi.pt         # Output trained model </br>
 
-# Part 1. Spectral Autoencoder-Decoder Network for Hyperspectral Denoising and Segmentation
+Part 1. Spectral Autoencoder-Decoder Network for Hyperspectral Denoising and Segmentation
 
 ## 📌 Purpose
 
