@@ -3,11 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class Autoencoder(nn.Module):
-    # CRITICAL: Add n_frames_sample during initialization
     def __init__(self, zdims, n_frames):
         super().__init__()
         self.zdims = zdims
-        self.n_frames = n_frames # Store a typical/target frame number
+        self.n_frames = n_frames
 
         # --- Encoder Layers ---
         self.encoder = nn.Sequential(
@@ -70,7 +69,7 @@ class Autoencoder(nn.Module):
         z = self.fc_e(output)
         return z, input_sizes
 
-    # CRITICAL FIX IS HERE: `input_sizes=None` makes the argument optional
+    # `input_sizes=None` makes the argument optional
     def decode(self, z, input_sizes=None):
         # This `if` block handles the case when `decode` is called without `input_sizes`
         if input_sizes is None:
